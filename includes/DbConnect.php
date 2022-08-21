@@ -3,8 +3,9 @@
 class DbConnect {
     private $conn;
 
-    // function __construct() {
-    // }
+    function __construct() {
+
+    }
     
     /**
      * Establishing database connection
@@ -27,4 +28,6 @@ class DbConnect {
         // returing connection resource
         return $this->conn;
     }
+    
 }
+echo "in file";
