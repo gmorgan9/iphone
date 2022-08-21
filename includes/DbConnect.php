@@ -2,18 +2,11 @@
 
 class DbConnect
 {
-    private $conn;
+    
 
-    function __construct()
-    {
-    }
-
-    /**
-     * Establishing database connection
-     * @return database connection handler
-     */
     function connect()
     {
+        private $conn;
         define('DB_USERNAME', 'root');
         define('DB_PASSWORD', 'BIGmorgan1999!');
         define('DB_HOST', 'localhost');
