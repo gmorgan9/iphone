@@ -1,31 +1,15 @@
 <?php
 
-class DbOperation
-{
-    private $conn;
+include("/Config.php");
 
-    //Constructor
-    function __construct()
-    {
-        require_once dirname(__FILE__) . '/Config.php';
-        require_once dirname(__FILE__) . '/DbConnect.php';
-        // opening db connection
-        $db = new DbConnect();
-        $this->conn = $db->connect();
-    }
+  
 
-    //Function to create a new user
-    public function createTeam($name, $memberCount)
-    {
-        $stmt = $this->conn->prepare("INSERT INTO team(name, member) values(?, ?)");
-        $stmt->bind_param("si", $name, $memberCount);
-        $result = $stmt->execute();
-        $stmt->close();
-        if ($result) {
-            return true;
-        } else {
-            return false;
-        }
-    }
+$sql = "INSERT INTO team(name, member) values(?, ?)";
 
+if (mysqli_query($conn, $sql)) {
+  return true;
+} else {
+  return false;
 }
+
+mysqli_close($conn);

@@ -5,17 +5,14 @@ $response = array();
 
 if($_SERVER['REQUEST_METHOD']=='POST'){
 
-    //getting values
-    $teamName = $_POST['name'];
-    $memberCount = $_POST['member'];
+    // //getting values
+    // $teamName = $_POST['name'];
+    // $memberCount = $_POST['member'];
 
-    //including the db operation file
-    require_once '../includes/DbOperation.php';
-
-    $db = new DbOperation();
+    include("../includes/DbOperation.php");
 
     //inserting values 
-    if($db->createTeam($teamName,$memberCount)){
+    if($result == true){
         $response['error']=false;
         $response['message']='Team added successfully';
     }else{
