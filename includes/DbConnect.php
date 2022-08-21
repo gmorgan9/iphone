@@ -4,7 +4,10 @@ class DbConnect {
     private $conn;
 
     function __construct() {
-        function connect()
+
+    }
+
+    function connect()
     {
         require_once 'Config.php';
 
@@ -19,8 +22,6 @@ class DbConnect {
 
         // returing connection resource
         return $this->conn;
-    }
-
     }
     
     /**
