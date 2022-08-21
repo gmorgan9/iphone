@@ -4,7 +4,7 @@ class DbConnect {
     private $conn;
 
     function __construct() {
-
+        echo "in file";
     }
     
     /**
@@ -15,7 +15,7 @@ class DbConnect {
     function connect()
     {
         require_once 'Config.php';
-        echo "in file";
+
         // Connecting to mysql database
         $this->conn = new mysqli(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_NAME);
 
