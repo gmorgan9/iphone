@@ -10,7 +10,7 @@ class DbConnect
 
     /**
      * Establishing database connection
-     * @return database connection handler
+     *  connection handler
      */
     function connect()
     {
