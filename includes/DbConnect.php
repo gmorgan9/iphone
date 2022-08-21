@@ -1,5 +1,5 @@
 <?php
-
+echo "in file";
 class DbConnect
 {
     private $conn;
@@ -7,11 +7,12 @@ class DbConnect
     function __construct()
     {
     }
-
+    
     /**
      * Establishing database connection
-     * connection handler
+     * @return database connection handler
      */
+    
     function connect()
     {
         require_once 'Config.php';
@@ -20,8 +21,8 @@ class DbConnect
         $this->conn = new mysqli(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_NAME);
 
         // Check for database connection error
-        if ($conn->connect_error) {
-            echo "Failed to connect to MySQL: " . $conn->connect_error;
+        if (mysqli_connect_errno()) {
+            echo "Failed to connect to MySQL: " . mysqli_connect_error();
         }
         echo "Success";
 
