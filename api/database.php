@@ -20,10 +20,19 @@ $memberCount = $_POST['member'];
 $sql = "INSERT INTO team(name, member) values('$teamName', '$memberCount')";
 
 if (mysqli_query($conn, $sql)) {
-  echo "New record created successfully";
-} else {
-  echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-}}
+
+        $response['error']=false;
+        $response['message']='Team added successfully';
+    }else{
+
+        $response['error']=true;
+        $response['message']='Could not add team';
+    }
+
+}else{
+    $response['error']=true;
+    $response['message']='You are not authorized';
+}
 
 mysqli_close($conn);
 ?>
