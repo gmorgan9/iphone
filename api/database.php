@@ -1,5 +1,5 @@
 <?php
-$servername = "10.147.20.2";
+$servername = "phpmyadmin.morgancloud.us";
 $username = "root";
 $password = "BIGmorgan1999!";
 $dbname = "iphone";
