@@ -3,9 +3,8 @@
 class DbConnect {
     private $conn;
 
-    function __construct() {
-        echo "in file";
-    }
+    // function __construct() {
+    // }
     
     /**
      * Establishing database connection
