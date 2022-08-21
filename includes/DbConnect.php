@@ -6,10 +6,15 @@ class DbConnect {
     function __construct() {
 
     }
-
+    
+    /**
+     * Establishing database connection
+     * @return database connection handler
+     */
+    
     function connect()
     {
-        require_once 'Config.php';
+        include("Config.php");
 
         // Connecting to mysql database
         $this->conn = new mysqli(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_NAME);
@@ -23,12 +28,5 @@ class DbConnect {
         // returing connection resource
         return $this->conn;
     }
-    
-    /**
-     * Establishing database connection
-     * @return database connection handler
-     */
-    
-    
     
 }
