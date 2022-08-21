@@ -4,15 +4,7 @@ class DbConnect {
     private $conn;
 
     function __construct() {
-
-    }
-    
-    /**
-     * Establishing database connection
-     * @return database connection handler
-     */
-    
-    function connect()
+        function connect()
     {
         require_once 'Config.php';
 
@@ -28,6 +20,14 @@ class DbConnect {
         // returing connection resource
         return $this->conn;
     }
+
+    }
+    
+    /**
+     * Establishing database connection
+     * @return database connection handler
+     */
+    
+    
     
 }
-echo "in file";
