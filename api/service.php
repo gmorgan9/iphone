@@ -9,8 +9,10 @@ if (mysqli_connect_errno())
   echo "Failed to connect to MySQL: " . mysqli_connect_error();
 }
  
+$name = $_POST['name'];
+$member = $_POST['member'];
 // This SQL statement selects ALL from the table 'Locations'
-$sql = "SELECT * FROM team";
+$sql = "INSERT into team (name, member) VALUES ('$name', '$member')";
  
 // Check if there are results
 if ($result = mysqli_query($con, $sql))
