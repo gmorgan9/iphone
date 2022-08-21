@@ -11,7 +11,7 @@ if (!$conn) {
   die("Connection failed: " . mysqli_connect_error());
 }
 
-$response = array();
+$response = [];
 if($_SERVER['REQUEST_METHOD']=='POST'){
 //getting values
 $teamName = $_POST['name'];
