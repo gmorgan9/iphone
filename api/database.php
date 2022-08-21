@@ -12,6 +12,7 @@ if (!$conn) {
 }
 
 $response = [];
+echo $_SERVER['SERVER_NAME'];
 echo "here";
 if(isset($_['POST'])){
     echo "there";
