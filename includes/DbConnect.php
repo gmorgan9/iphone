@@ -4,14 +4,7 @@ class DbConnect
 {
     private $conn;
 
-    function __construct()
-    {
-    }
 
-    /**
-     * Establishing database connection
-     * @return database connection handler
-     */
     function connect()
     {
         require_once 'Constants.php';
