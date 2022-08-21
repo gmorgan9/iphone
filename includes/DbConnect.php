@@ -10,7 +10,7 @@ class DbConnect
 
     /**
      * Establishing database connection
-     *  connection handler
+     * connection handler
      */
     function connect()
     {
@@ -20,10 +20,10 @@ class DbConnect
         $this->conn = new mysqli(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_NAME);
 
         // Check for database connection error
-        if ($conn->connect_error) {
-            die("Connection failed: " . $conn->connect_error);
+        if (mysqli_connect_errno()) {
+            echo "Failed to connect to MySQL: " . mysqli_connect_error();
         }
-        echo "Connected successfully";
+        echo "Success";
 
         // returing connection resource
         return $this->conn;
