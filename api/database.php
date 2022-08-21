@@ -12,9 +12,8 @@ if (!$conn) {
 }
 
 $response = [];
-echo $_SERVER['SERVER_NAME'];
 echo "here";
-if(isset($_['POST'])){
+if($_SERVER['REQUEST_METHOD']=='POST'){
     echo "there";
 //getting values
 $teamName = $_POST['name'];
