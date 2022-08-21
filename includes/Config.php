@@ -1,12 +1,15 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Belal
- * Date: 12/08/16
- * Time: 7:58 PM
- */
+$servername = "localhost";
+$username = "root";
+$password = "BIGmorgan1999!";
+$database = "iphone";
 
-define('DB_USERNAME', 'root');
-define('DB_PASSWORD', 'BIGmorgan1999!');
-define('DB_HOST', 'localhost');
-define('DB_NAME', 'iphone');
+// Create connection
+$conn = mysqli_connect($servername, $username, $password, $database);
+
+// Check connection
+if (!$conn) {
+  die("Connection failed: " . mysqli_connect_error());
+}
+echo "Connected successfully";
+?>
