@@ -12,7 +12,9 @@ if (!$conn) {
 }
 
 $response = [];
+echo "here";
 if($_SERVER['REQUEST_METHOD']=='POST'){
+    echo "there";
 //getting values
 $teamName = $_POST['name'];
 $memberCount = $_POST['member'];
