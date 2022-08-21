@@ -22,6 +22,8 @@ class DbConnect
         // Check for database connection error
         if (mysqli_connect_errno()) {
             echo "Failed to connect to MySQL: " . mysqli_connect_error();
+        } else {
+            echo "success";
         }
 
         // returing connection resource
