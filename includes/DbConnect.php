@@ -4,12 +4,17 @@ class DbConnect
 {
     private $conn;
 
+    function __construct()
+    {
+    }
+
+    /**
+     * Establishing database connection
+     * @return database connection handler
+     */
     function connect()
     {
-        define('DB_USERNAME', 'root');
-        define('DB_PASSWORD', 'BIGmorgan1999!');
-        define('DB_HOST', 'localhost');
-        define('DB_NAME', 'iphone');
+        require_once 'Config.php';
 
         // Connecting to mysql database
         $this->conn = new mysqli(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_NAME);
@@ -18,10 +23,9 @@ class DbConnect
         if (mysqli_connect_errno()) {
             echo "Failed to connect to MySQL: " . mysqli_connect_error();
         }
-        
+        echo "Success";
 
         // returing connection resource
         return $this->conn;
-        echo "Success";
     }
 }
